@@ -1,0 +1,453 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+.learn-more:active {
+    transform: scale(0.95); /* Slightly shrinks when clicked */
+}
+
+.training-section {
+    background-image: url('src/assets/img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease forwards; /* Animation de la section */
+  }
+
+.training-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.content {
+    margin-top: 10px; /* Vous pouvez ajuster cette valeur */
+}
+
+
+.training-section h2, .training-section p {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s; /* Delay for each text */
+}
+
+.training-section p {
+    animation-delay: 1.5s; /* Delay for the second paragraph */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .training-section {
+        padding: 3rem 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+}
+
+  /* Styles spécifiques pour le texte */
+  h1, p {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  
+  h1 {
+    animation-delay: 0.5s;
+  }
+  
+  p {
+    animation-delay: 1s;
+  }
+  
+  /* Contenu spécifique */
+  /* Style du contenu principal */
+  
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* STEP Training and Evaluation Section */
+.step-training-section,
+.evaluation {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #E1DEE6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #0f0e0e;
+}
+
+.step-training-section h2,
+.evaluation h2 {
+    color: #142B6F;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-container p,
+.evaluation p {
+    color: #020202;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.training-image,
+.findings-image {
+    width: 100%;
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-image:hover,
+.findings-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Image Agrandie et Centrée */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.training-image {
+    width: 90%; /* Augmente la largeur de l'image à 90% de l'écran */
+    max-width: 700px; /* Augmente la largeur maximale à 700px */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Augmente l'espacement entre les images */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Wrapper pour chaque image et son texte */
+.image-text-wrapper {
+    text-align: center;
+    max-width: 350px; /* Peut être ajusté selon la taille souhaitée */
+}
+
+/* Image Styling */
+.findings-image {
+    width: 100%; /* L'image occupera 100% de la largeur du conteneur */
+    max-width: 350px; /* Augmentez la taille maximale de l'image */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.findings-image:hover {
+    transform: scale(1.1); /* Agrandissement léger au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling du texte sous chaque image */
+.image-caption {
+    margin-top: 10px;
+    font-size: 1rem; /* Taille du texte */
+    color: #555555;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #E1DEE6;;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+
+.text {
+    max-width: 45%;
+    margin-left: 20px;
+}
+
+
+p {
+    color: #070707;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.simple-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add padding around the section */
+    background-color:  #E1DEE6;; /* Set the background color to grey */
+}
+
+
+/* Style for the text */
+.text {
+    flex: 1; /* Allow text to take available space */
+    margin-right: 20px; /* Space between text and image */
+}
+
+/* Style for the image */
+.image {
+    max-width: 40%; /* Set maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Styling for the Read More section */
+.read-more-section {
+    text-align: center; /* Center text in the section */
+    margin: 40px 0; /* Add margin above and below the section */
+}
+
+/* Styling for the button */
+.read-more-button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Change button color on hover */
+
+/* Style général de la section de contact */
+
+/* Conteneur du formulaire */
+.form-container {
+    flex: 1; /* Prend l'espace disponible */
+    margin-right: 30px; /* Espacement entre le formulaire et l'image */
+}
+
+/* Titre du formulaire */
+.form-container h2 {
+    font-size: 28px; /* Taille de police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #0e0b0b; /* Couleur du texte */
+}
+
+/* Labels */
+label {
+    display: block; /* Chaque label sur une nouvelle ligne */
+    margin-bottom: 8px; /* Espacement sous les labels */
+    font-weight: bold; /* Texte en gras */
+    color: #0d0c0c; /* Couleur du texte */
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Prend toute la largeur */
+    padding: 12px; /* Espacement interne */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de police */
+    transition: border-color 0.3s; /* Transition pour effet focus */
+}
+
+/* Effet de focus sur les champs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color:#142B6F; /* Bordure bleue au focus */
+    outline: none; /* Retirer l'outline par défaut */
+}
+
+/* Style du label des conditions */
+.terms-label {
+    margin: 10px 0; /* Espacement autour du label */
+}
+
+/* Bouton d'envoi */
+.send-button {
+    padding: 12px 20px; /* Espacement interne */
+    background-color: #007BFF; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de police */
+    cursor: pointer; /* Curseur pointer */
+    transition: background-color 0.3s; /* Transition pour l'effet hover */
+}
+
+/* Effet hover sur le bouton */
+.send-button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au hover */
+}
+
+/* Image de contact */
+.contact-image {
+    flex: 1; /* Prend l'espace disponible */
+    max-width: 100%; /* S'assure que l'image ne déborde pas */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour l'image */
+}
+.content {
+    margin-top: 500px; /* Augmenter pour déplacer la section encore plus bas */
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    padding: 10px 15px; /* Réduction du padding */
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour du contenu */
+    opacity: 0; /* Commence invisible pour l'animation */
+    transform: translateY(50px); /* Décale le contenu vers le bas au début */
+    animation: fadeInUp 1s ease-out forwards; /* Animation d'apparition */
+    animation-delay: 0.3s; /* Retarde légèrement l'apparition */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Se déplace vers sa position d'origine */
+    }
+}
+
+/* Titre et paragraphe */
+.content h2, .content p {
+    font-family: "Arial Black", Arial, sans-serif;
+    color: #E1DEE6; /* Couleur gris clair */
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 3em; /* Augmente la taille du texte du titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    opacity: 0; /* Commence invisible */
+    animation: fadeInTitle 1s ease-out forwards; /* Animation du titre */
+    animation-delay: 0.5s; /* Retarde l'apparition du titre */
+}
+
+@keyframes fadeInTitle {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Retourne à sa position d'origine */
+    }
+}
+
+.content p {
+    font-size: 1em; /* Taille du texte réduite */
+    line-height: 1.4;
+    margin-bottom: 10px; /* Réduction de l'espace entre les paragraphes */
+    opacity: 0; /* Commence invisible */
+    animation: fadeInText 1s ease-out forwards; /* Animation du texte */
+    animation-delay: 0.7s; /* Retarde l'apparition du texte */
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Retourne à sa position d'origine */
+    }
+}

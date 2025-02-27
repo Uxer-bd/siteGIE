@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('src/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #d6cfcf;
+}
+
+.step-publications {
+  width: 100%;
+  max-width: 800px;
+  padding: 50px;
+  text-align: center;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.animated-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.publications-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.publication-article {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  border-radius: 8px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.publication-article.visible {
+  opacity: 1;
+}
+
+.publication-details h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.publication-details p {
+  color: #0b0a0a;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #050505;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #E1DEE6;
+}
+
+
+
+/* Publication and Media Item */
+.media-article, .publication-article {
+    display: flex;
+    max-width: 800px;
+    background: #E1DEE6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    margin: 20px auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.media-article:hover, .publication-article:hover {
+    transform: translateY(-5px);
+}
+
+/* Replacing Images with Icons */
+.media-icon, .publication-icon {
+    font-size: 3em;
+    color: #142B6F;
+    background-color: #E1DEE6;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.media-article:hover .media-icon, .publication-article:hover .publication-icon {
+    color: #142B6F;
+    transform: scale(1.1);
+}
+
+.media-details, .publication-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-details h3 a, .publication-details h3 a {
+    color: #142B6F;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.media-details h3 a:hover, .publication-details h3 a:hover {
+    color: #142B6F;
+}
+
+.media-source, .publication-journal {
+    color: #E1DEE6;
+    font-size: 0.9em;
+}
+
+.media-description, .publication-authors {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Applying Animations */
+section, .media-article, .publication-article {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+button, .btn-link {
+    animation: fadeInScale 0.4s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .media-article, .publication-article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .media-icon, .publication-icon {
+        margin-bottom: 15px;
+    }
+}
+.animated-title {
+    color: black;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out; /* Ajoute l'animation */
+}
+
+/* Définir l'animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Départ invisible */
+        transform: translateY(-20px); /* Départ légèrement vers le haut */
+    }
+    to {
+        opacity: 1; /* Fin visible */
+        transform: translateY(0); /* Position finale */
+    }
+}

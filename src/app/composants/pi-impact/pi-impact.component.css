@@ -1,0 +1,388 @@
+header p {
+    font-size: 1.8em;
+    margin: 0.1em 0;
+  }
+  
+ /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+   
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+.learn-more:active {
+    transform: scale(0.95); /* Slightly shrinks when clicked */
+}
+
+.training-section {
+    background-image: url('src/assets/img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease forwards; /* Animation de la section */
+  }
+
+.training-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.content {
+    margin-top: 10px; /* Vous pouvez ajuster cette valeur */
+}
+
+
+.training-section h2, .training-section p {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s; /* Delay for each text */
+}
+
+.training-section p {
+    animation-delay: 1.5s; /* Delay for the second paragraph */
+}
+
+.learn-more {
+    background-color: #e67e22;
+    border: none;
+    padding: 0.8rem 2rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: slideUp 1s forwards 2s;
+}
+
+.learn-more:hover {
+    background-color: #d35400;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .training-section {
+        padding: 3rem 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+}
+
+  /* Styles spécifiques pour le texte */
+  h1, p {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  
+  h1 {
+    animation-delay: 0.5s;
+  }
+  
+  p {
+    animation-delay: 1s;
+  }
+  
+  /* Contenu spécifique */
+  /* Style du contenu principal */
+  
+  
+.pi-impact-details,
+.statistics-section,
+.contact-section {
+    background: #E1DEE6;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(2, 2, 2, 0.1);
+    margin: 20px;
+    padding: 20px;
+    opacity: 0; /* Initialiser avec une opacité nulle */
+    transform: translateY(20px); /* Initialiser avec un léger déplacement vers le bas */
+    animation: fadeInUp 0.5s forwards; /* Utiliser l'animation fadeInUp */
+}
+
+
+   
+  
+  
+       
+   
+
+
+.pi-impact-text,
+.detailed-impact-text {
+    color: #0e0e0e;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.statistics-section {
+    padding: 60px 0; /* Espacement vertical accru */
+    background-color: #f4f4f4; /* Couleur de fond légèrement plus sombre */
+    text-align: center; /* Centrer le texte */
+}
+
+.pi-impact-title {
+    font-size: 2.5rem; /* Taille de la police pour le titre */
+    margin-bottom: 40px; /* Espacement en bas du titre */
+    color: #2c3e50; /* Couleur du titre */
+    font-weight: bold; /* Mettre en gras le titre */
+    text-transform: uppercase; /* Titre en majuscules */
+}
+
+.container {
+    display: flex; /* Flexbox pour l'alignement */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    flex-wrap: nowrap; /* Pas de retour à la ligne */
+    max-width: 1200px; /* Largeur maximale pour centrer le contenu */
+    margin: 0 auto; /* Centrer le conteneur dans la page */
+}
+
+.statistic {
+    background-color: #ffffff; /* Couleur de fond pour les cartes */
+    border: 1px solid #e0e0e0; /* Bordure légère */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 20px; /* Espacement autour des cartes */
+    padding: 30px; /* Espacement interne accru */
+    width: 220px; /* Largeur fixe pour les cartes */
+    height: 220px; /* Hauteur fixe pour assurer la même taille */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'animation */
+    display: flex; /* Pour centrer le contenu à l'intérieur */
+    flex-direction: column; /* Organiser le contenu en colonne */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+}
+
+.statistic:hover {
+    transform: translateY(-8px); /* Légère élévation lors du survol */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée lors du survol */
+}
+
+.statistic i {
+    font-size: 3rem; /* Taille des icônes */
+    color:  #142B6f; /* Couleur des icônes */
+    margin-bottom: 15px; /* Espacement en bas de l'icône */
+}
+
+
+
+.text p {
+    margin: 5px 0; /* Espacement vertical des paragraphes */
+    color: #666; /* Couleur du texte des paragraphes */
+    font-size: 0.9rem; /* Taille de la police pour les paragraphes */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+
+.text h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.text p {
+    margin: 0;
+    color: #666;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #142B6f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.contact-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.content {
+    margin-top: 500px; /* Augmenter pour déplacer la section encore plus bas */
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    padding: 10px 15px; /* Réduction du padding */
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour du contenu */
+    opacity: 0; /* Commence invisible pour l'animation */
+    transform: translateY(50px); /* Décale le contenu vers le bas au début */
+    animation: fadeInUp 1s ease-out forwards; /* Animation d'apparition */
+    animation-delay: 0.3s; /* Retarde légèrement l'apparition */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Se déplace vers sa position d'origine */
+    }
+}
+
+/* Titre et paragraphe */
+.content h2, .content p {
+    font-family: "Arial Black", Arial, sans-serif;
+    color: #E1DEE6; /* Couleur gris clair */
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 3em; /* Augmente la taille du texte du titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    opacity: 0; /* Commence invisible */
+    animation: fadeInTitle 1s ease-out forwards; /* Animation du titre */
+    animation-delay: 0.5s; /* Retarde l'apparition du titre */
+}
+
+@keyframes fadeInTitle {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Retourne à sa position d'origine */
+    }
+}
+
+.content p {
+    font-size: 1em; /* Taille du texte réduite */
+    line-height: 1.4;
+    margin-bottom: 10px; /* Réduction de l'espace entre les paragraphes */
+    opacity: 0; /* Commence invisible */
+    animation: fadeInText 1s ease-out forwards; /* Animation du texte */
+    animation-delay: 0.7s; /* Retarde l'apparition du texte */
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateY(0); /* Retourne à sa position d'origine */
+    }
+}

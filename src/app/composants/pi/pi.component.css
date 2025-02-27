@@ -1,0 +1,290 @@
+/* Généralités */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+header h1, header p {
+  font-family: "Arial Black", Arial, sans-serif;
+  color: white; /* Couleur du texte */
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0.2em 0;
+}
+
+header p {
+  font-size: 1.8em;
+  margin: 0.1em 0;
+}
+
+
+/* Section principale */
+.training-section {
+  background-image: url('src/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease forwards; /* Animation de la section */
+}
+
+
+.content {
+
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: contentFadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Animation des sections */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles spécifiques pour le texte */
+h1, p {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+h1 {
+  animation-delay: 0.5s;
+}
+
+p {
+  animation-delay: 1s;
+}
+
+/* Contenu spécifique */
+/* Style du contenu principal */
+.content {
+  margin-top: 250px; /* Augmentation pour déplacer la section encore plus bas */
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 10px 15px; /* Réduction du padding */
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour du contenu */
+  opacity: 0; /* Commence invisible pour l'animation */
+  transform: translateY(50px); /* Décale le contenu vers le bas au début */
+  animation: fadeInUp 1s ease-out forwards; /* Animation d'apparition */
+  animation-delay: 0.3s; /* Retarde légèrement l'apparition */
+}
+
+/* Animation d'apparition du contenu */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Se déplace vers sa position d'origine */
+  }
+}
+
+/* Titre et paragraphe */
+.content h2, .content p {
+  font-family: "Arial Black", Arial, sans-serif;
+  color: #E1DEE6; /* Couleur gris clair */
+  font-weight: bold;
+}
+
+.content h2 {
+  font-size: 3em; /* Augmente la taille du texte du titre */
+  margin-bottom: 10px; /* Espacement sous le titre */
+  opacity: 0; /* Commence invisible */
+  animation: fadeInTitle 1s ease-out forwards; /* Animation du titre */
+  animation-delay: 0.5s; /* Retarde l'apparition du titre */
+}
+
+/* Animation du titre */
+@keyframes fadeInTitle {
+  to {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Retourne à sa position d'origine */
+  }
+}
+
+.content p {
+  font-size: 1em; /* Taille du texte réduite */
+  line-height: 1.4;
+  margin-bottom: 10px; /* Réduction de l'espace entre les paragraphes */
+  opacity: 0; /* Commence invisible */
+  animation: fadeInText 1s ease-out forwards; /* Animation du texte */
+  animation-delay: 0.7s; /* Retarde l'apparition du texte */
+}
+
+/* Animation du texte */
+@keyframes fadeInText {
+  to {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Retourne à sa position d'origine */
+  }
+}
+
+/* Style du bouton */
+.learn-more {
+  padding: 8px 20px; /* Réduction du padding du bouton */
+  font-size: 1em; /* Taille du texte du bouton réduite */
+  background-color: #FFD601; /* Couleur jaune pour le fond */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Bords arrondis */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Moins de marge au-dessus du bouton */
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Commence invisible */
+  animation: bounce 1s infinite;
+  animation: fadeInButton 1s ease-out forwards; /* Animation du bouton */
+
+  animation-delay: 1s; /* Retarde l'apparition du bouton */
+}
+
+/* Animation du bouton */
+@keyframes fadeInButton {
+  to {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Retourne à sa position d'origine */
+  }
+}
+
+
+.training-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Section de formation */
+.training-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E1DEE6;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Styles pour la page formation */
+.pi-training {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne les éléments au début de la page */
+  padding: 20px;
+  width: 100%; /* Assure que l'élément prend toute la largeur */
+}
+
+/* Conteneur du texte */
+.text-container {
+  width: 100%; /* Prend toute la largeur disponible */
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime les padding internes */
+  text-align: left; /* Assure que le texte commence à gauche */
+}
+
+/* Paragraphe */
+.text-container p {
+  margin: 0; /* Supprime l'espace au-dessus et en-dessous des paragraphes */
+  padding: 0; /* Retire tout padding pour ne pas ajouter d'espacement interne */
+  line-height: 1.6; /* Améliore la lisibilité du texte */
+  font-size: 1.2em; /* Taille du texte */
+}
+
+.training-image {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-family: "Arial Black", Arial, sans-serif;
+  color: #142B6f;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Espacement et texte */
+.content p {
+  margin-bottom: 20px;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content h2 {
+  font-family: "Arial Black", sans-serif;
+  color: #142B6F;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Adaptation mobile */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    margin-bottom: 20px;
+  }
+}
+button {
+  background-color: #FFD601; /* Couleur jaune */
+  color: white; /* Texte en blanc */
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transition douce pour l'effet de survol */
+  text-transform: uppercase;
+}
+
+

@@ -1,0 +1,434 @@
+.step-training {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; /* S'étend sur toute la largeur de la page */
+    margin: 0; /* Enlève les marges pour coller au bord */
+}
+
+.step-background {
+    background-image: url('src/assets/img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease forwards;
+}
+
+.content {
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 0; /* Évite tout décalage supplémentaire vers le bas */
+}
+
+    
+
+.step-title {
+    font-size: 2.5em; /* Taille du titre */
+    margin-bottom: 15px; /* Espacement en bas */
+    font-weight: bold; /* Gras pour l'impact */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour le titre */
+}
+
+.step-description {
+    font-size: 1.2em; /* Taille du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+    line-height: 1.6; /* Hauteur de ligne pour meilleure lisibilité */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour la description */
+}
+
+.btn-more {
+    background-color: #2980b9; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Gras pour le bouton */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+.btn-more:hover {
+    background-color: #1a5276; /* Couleur du bouton au survol */
+}
+
+.success-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #142B6F; /* Couche sombre pour améliorer la lisibilité */
+    border-radius: 10px; /* Correspondre aux coins arrondis */
+    z-index: 1; /* Positionner derrière le texte */
+}
+
+.success-title {
+    font-size: 2.5rem;
+    color: #fff; /* Couleur blanche pour le titre */
+    z-index: 2; /* Au-dessus de la couche sombre */
+}
+
+.success-subtitle {
+    font-size: 1.2rem;
+    color: #eee; /* Couleur gris clair */
+    margin: 10px 0 20px; /* Marges pour espacement */
+    z-index: 2; /* Au-dessus de la couche sombre */
+}
+
+.btn-more {
+    background-color: #FFD601; /* Couleur verte */
+    color: white;
+    padding: 12px 25px; /* Espacement amélioré */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s; /* Transition pour effet au survol */
+    z-index: 2; /* Au-dessus de la couche sombre */
+    position: relative; /* Pour la superposition avec ::before */
+}
+
+.btn-more:hover {
+    background-color: #FFD601; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.success-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in;
+}
+
+
+
+
+.btn-more {
+    background-color:#FFD601;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+
+
+.pi-success-section {
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.pi-success-content {
+    background: #142B6F;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.btn-discover {
+    background:#FFD601;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-discover:hover {
+    background: #FFD601;
+}
+
+.pi-success-container {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-item {
+    flex: 1 0 45%; /* Adjust to two images per row */
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+.image-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: slideIn 0.5s ease;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.contact-section {
+    display: flex;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    margin: 15px 0;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Arrière-plan semi-transparent */
+    z-index: 1000; /* S'assurer que le popup est au-dessus du reste du contenu */
+}
+
+.popup-content {
+    background-color: #fff; /* Couleur de fond blanche pour le contenu */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px;
+    width: 90%; /* Largeur adaptable */
+    max-width: 600px; /* Largeur maximale */
+    max-height: 80%; /* Limite la hauteur du popup */
+    overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour profondeur */
+    text-align: center; /* Centrer le texte */
+}
+
+.close {
+    cursor: pointer; /* Curseur pointer pour indiquer cliquable */
+    font-size: 28px; /* Taille du texte pour le bouton de fermeture */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #333; /* Couleur du texte */
+}
+
+.popup-title {
+    margin-bottom: 15px; /* Espacement sous le titre */
+    font-size: 24px; /* Taille de police pour le titre */
+    font-weight: bold; /* Gras pour le titre */
+}
+
+.popup-image {
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas le conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    margin-bottom: 15px; /* Espacement sous l'image */
+}
+
+.popup-text-container {
+    margin-bottom: 20px; /* Espacement sous le texte */
+    line-height: 1.6; /* Hauteur de ligne pour meilleure lisibilité */
+    text-align: left; /* Alignement à gauche pour le texte */
+}
+
+.popup-text-container p {
+    margin: 0; /* Enlever la marge par défaut pour un espacement cohérent */
+}
+
+.close-button {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement interne */
+    cursor: pointer; /* Curseur pointer pour indiquer cliquable */
+    font-size: 16px; /* Taille du texte */
+    transition: background-color 0.3s; /* Transition pour effet hover */
+}
+
+.close-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+.responsive-image {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    width: 75%; /* Augmente la largeur à 75% du conteneur, ajustez selon vos préférences */
+    /* Vous pouvez aussi définir une taille fixe, par exemple : */
+    /* width: 300px; */
+}
+/* Animation de déplacement lors du défilement */
+@keyframes scrollEffect {
+    0% {
+        transform: translateY(50px); /* Déplace l'élément vers le bas */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Appliquer l'animation aux sections qui apparaissent au défilement */
+.step-title, .step-description, .pi-success-content {
+    animation: scrollEffect 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animation au survol pour les éléments de la grille d'image */
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre au survol */
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Appliquez l'animation lors de la fermeture de la popup */
+.popup.fade-out .popup-content {
+    animation: fadeOut 0.3s ease-in-out;
+}
+/* Styles de base du bouton */
+.btn-more {
+    background-color: #FFD601; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 12px 25px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Texte en gras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'animation */
+    position: relative; /* Nécessaire pour l'effet de l'ombre */
+}
+
+/* Effet de survol */
+.btn-more:hover {
+    transform: translateY(-5px) scale(1.05); /* Glissement vers le haut et grossissement */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Ombre douce au survol */
+}
+
+/* Animation d'apparition au chargement de la page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-more {
+    animation: fadeIn 1s ease-out; /* Appliquer l'animation d'apparition */
+}
+
+/* Effet supplémentaire : survol avec changement de couleur */
+.btn-more:hover {
+    background-color: #e0c100; /* Changer légèrement la couleur au survol */
+}

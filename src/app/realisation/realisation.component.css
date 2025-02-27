@@ -1,0 +1,51 @@
+*{
+    margin: 0 auto;
+}
+#logo{
+    background-image: url("/assets/img/1.jpg");
+    background-size: cover;
+    height: 40em;
+    color: white;
+}
+
+.textInfo{
+    font-size: 60px;
+}
+
+.presentation{
+    background-color: #bdbdbe;
+    color: #142b61;
+    height: 500px;
+    position: relative;
+}
+
+.presentation img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.button{
+    background-color: #ffd601;
+    color: #142b6f;
+    border-radius: 30px;
+}
+
+#animeProgramme h4{
+    color: #142b61;
+}
+
+.app_anime{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: apparition 1s ease-in forwards;
+}
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Equipe description */

@@ -1,0 +1,234 @@
+
+<router-outlet></router-outlet>
+
+
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Sticky Footer Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="sticky-footer.css" rel="stylesheet"> -->
+  </head>
+  <body class="position-relative justify-content-center">
+
+    <!-- navbar -->
+    <header>
+      <div class="row">
+        <nav class="navbar navbar-expand-md navbar-dark position-relative" aria-label="Fourth navbar example">
+          <div class="container">
+            <a class="navbar-brand" href="#">LOGO GIE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link ms-5 active" aria-current="page" routerLink="/home">Home</a>
+                </li>                
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link ms-5 active dropdown-toggle" href="" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">GIE</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                    <li><a class="dropdown-item" routerLink="/about">A propos</a></li>
+                    <li><a class="dropdown-item" routerLink="/realisation">Réalisation</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link ms-5 active dropdown-toggle" routerLink="/pi" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">PI</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                    <li><a class="dropdown-item" routerLink="/pi-impact">Impact</a></li>
+                    <li><a class="dropdown-item" routerLink="/pi-publication">Publication</a></li>
+                    <li><a class="dropdown-item" routerLink="/pi-succes">Succes</a></li>
+                  </ul>
+                </li>
+                
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link ms-5 active dropdown-toggle" routerLink="/step" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Etapes</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                    <li><a class="dropdown-item" routerLink="/step-impact">Impact</a></li>
+                    <li><a class="dropdown-item" routerLink="/step-succes">Sucess</a></li>
+                    <li><a class="dropdown-item" routerLink="/step-publication">Publication</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form>
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+
+      <!-- Entête -->
+       <section>
+          <!-- <app-presentation></app-presentation> -->
+          <router-outlet></router-outlet>
+       </section>
+
+      <!-- Contact -->
+      <section class="py-2 mt-5 border-bottom text-white" style="background-color: #142b6f;">
+        <div class="container">
+            <h2>CONTACT</h2>
+            <h4>Entrez en contact avec nous</h4>
+            <div class="row py-2 gy-4">
+                <div class="col-12 col-md-6">
+                    <img src="assets/img/contact.jpg" alt="coffet" class="w-100">
+                </div>
+                <div class="col-12 col-md-6">
+                    <form class="row">
+                        <div class="col-6">
+                            <label for="prenom" class="form-label" >prenom</label>
+                            <input type="text" class="form-control" name="prenom" id="prenom" >
+                        </div>
+                        <div class="col-6">
+                            <label for="nom" class="form-label" >nom</label>
+                            <input type="text" class="form-control" name="nom" id="nom" >
+                        </div>
+                        <div class="col-12">
+                            <label for="nom" class="form-label" >Email</label>
+                            <input type="email" class="form-control" name="email" id="email" >
+                        </div>
+                        <div class="col-12">
+                            <label for="exampleFormControlTextarea1" class="form-label">commentaire</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 my-5">
+                            <button type="button" class="btn text-white w-100" style="background-color: #FFD601;">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- Pied de page -->
+      <section style="background-color: #e1Dee6; color: #142b6f;">
+        <div class="container">
+            <div class="row p-5 position-relative">
+                <div class="col-4">
+                    <h5>Nos services</h5>
+                    <ul class="list-unstyled pt-4">
+                        <li class="mb-2">Formations</li>
+                        <li class="mb-2">Coaching</li>
+                        <li class="mb-2">Accompagnement</li>
+                        <li class="mb-2">lorem</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h5>Liens utiles</h5>
+                    <div class="row pt-4">
+                      <div class="col-6">
+                        <h6>Pi</h6>
+                        <ul class="list-unstyled">
+                          <li class="mb-2">Pi Imapact</li>
+                          <li class="mb-2">Pi Sucess</li>
+                          <li class="mb-2">Pi Publication</li>
+                      </ul>
+                      </div>
+                      <div class="col-6">
+                        <h6>Etapes</h6>
+                        <ul class="list-unstyled">
+                          <li class="mb-2">Imapact</li>
+                          <li class="mb-2">Sucess</li>
+                          <li class="mb-2">Publication</li>
+                      </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h5>Lien Réseau social</h5>
+                    <ul class="list-unstyled pt-4">
+                        <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg> Facebook </li>
+                        <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                          </svg> +xx xx xx xx xx </li>
+                        <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                          </svg> lorem ipsum</li>
+                        <!-- <li class="mb-2">lorem</li> -->
+                    </ul>
+                </div>
+              </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+
+    <div class="position-fixed bottom-0 end-0 btn-group dropup">
+      <button type="button" class="btn p-2 rounded-pill m-5" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #FFD601;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+              <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+              <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
+            </svg> Question
+      </button>
+      <div class="dropdown-menu mr-3" style="width: 18em;height: 25em;border-radius: 20px;background-color: #142b6f;">
+        <!-- Dropdown menu links -->
+        <div class="row py-2 justify-content-center">
+          <div class="col-12">
+              <h6 class="fw-bold text-white">Posez votre question</h6>
+          </div>
+        </div>
+        <form class="pb-2" action="" style="background-color: white;">
+          <div class="mt-2">
+            <br>
+            <div class="m-3 mt-2">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="m-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Votre Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-12 m-3">
+              <button class="btn text-white" type="submit" style="background-color: #142b6f;">Envoyer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</html>
+
+
+

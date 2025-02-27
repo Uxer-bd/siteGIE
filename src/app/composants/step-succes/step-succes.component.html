@@ -1,0 +1,79 @@
+<div class="step-training first-step-training">
+    <div class="step-background">
+        <div class="content">
+            <h2 class="step-title" style="font-family: Arial, sans-serif;">STEP</h2>
+            <p class="step-description animated" style="font-family: Arial, sans-serif;">
+                The Student Training for Entrepreneurial Promotion (STEP) 
+                is an entrepreneurship training program that has been successfully 
+                implemented around the globe. Doorways is a certified provider for the STEP Training.
+            </p>
+            <a href="#cequenousfaisons" type="button" class="btn p-4 rounded-circle btn-lg mt-5" style="background-color: #ffd601;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                </svg>
+            </a>
+          
+        </div>
+    </div>
+</div>
+ 
+
+
+<section class="pi-success-container">
+    <h2 style="font-family: 'Arial Black', sans-serif;">Success Stories</h2>
+    
+    <div class="image-grid">
+        <div class="image-item" (click)="showInfo('leila')">
+            <img src="assets/img/Id1.jpg" alt="Leila Salifou" />
+            <p style="font-family: 'Arial Black', sans-serif;">Leila Salifou</p>
+
+        </div>
+        <div class="image-item" (click)="showInfo('habibout')">
+            <img src="assets/img/Id2.jpg" alt="Habibout" />
+            <p style="font-family: 'Arial Black', sans-serif;">Habibout</p>
+        </div>
+        <div class="image-item" (click)="showInfo('yeski')">
+            <img src="assets/img/Id1.jpg" alt="Yeski" />
+            <p style="font-family: 'Arial Black', sans-serif;">Yeski</p>
+            
+        </div>
+        <div class="image-item" (click)="showInfo('akouele')">
+            <img src="assets/img/Id2.jpg" alt="Akouélé" />
+            <p style="font-family: 'Arial Black', sans-serif;">Akouélé</p>
+        </div>
+    </div>
+    <div class="image-grid">
+        <div class="image-item" (click)="showInfo('leila')">
+            <img src="assets/img/Id1.jpg" alt="Leila Salifou" />
+            <p style="font-family: 'Arial Black', sans-serif;">Leila Salifou</p>
+
+        </div>
+        <div class="image-item" (click)="showInfo('habibout')">
+            <img src="assets/img/Id2.jpg" alt="Habibout" />
+            <p style="font-family: 'Arial Black', sans-serif;">Habibout</p>
+        </div>
+        <div class="image-item" (click)="showInfo('yeski')">
+            <img src="assets/img/Id1.jpg" alt="Yeski" />
+            <p style="font-family: 'Arial Black', sans-serif;">Yeski</p>
+            
+        </div>
+        <div class="image-item" (click)="showInfo('akouele')">
+            <img src="assets/img/Id2.jpg" alt="Akouélé" />
+            <p style="font-family: 'Arial Black', sans-serif;">Akouélé</p>
+        </div>
+    </div>
+
+    <!-- Popup pour afficher les informations -->
+    <div *ngIf="showPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" (click)="closePopup()">&times;</span>
+            <h3 class="popup-title">{{ popupTitle }}</h3>
+            <img *ngIf="popupImage" [src]="popupImage" alt="{{ popupTitle }}" class="popup-image" />
+            <div class="popup-text-container">  
+                <p>{{ popupContent }}</p>
+            </div>
+            <button (click)="closePopup()" class="close-button">Fermer</button>
+        </div>
+    </div>
+    
+</section>
